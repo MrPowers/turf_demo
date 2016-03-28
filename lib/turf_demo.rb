@@ -1,5 +1,9 @@
+ENV['RAILS_ENV'] ||= "development"
+
 module TurfDemo
 end
+
+require 'turf'
 
 def require_all(pattern)
   root = File.expand_path("../", File.dirname(__FILE__))
@@ -7,4 +11,5 @@ def require_all(pattern)
 end
 
 require_all("lib/turf_demo")
+require_all("config/turf")
 
